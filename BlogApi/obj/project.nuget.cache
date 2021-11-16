@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "pndkHml/jMk8VbQuxEaF9ZdVfZ0phfqb0Gh2VE/OLUaGsTCB40sbHQWZD4VvHqrCV0Tmk/JEc5d45QTNNXQuOg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pasha_f_o_x\\source\\repos\\BlogApi\\BlogApi\\BlogApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pasha_f_o_x\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Pasha_f_o_x\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Pasha_f_o_x\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Pasha_f_o_x\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Pasha_f_o_x\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Pasha_f_o_x\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
