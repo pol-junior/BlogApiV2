@@ -1,0 +1,24 @@
+.header-div{
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    background-image: url('https://64.media.tumblr.com/7bc1bbe5ea6e6c7e209fde43cf6ee491/2b4aa90b5b50b1c2-c6/s1280x1920/c7d2226ddf74a2ab0e5025ab9f1940c9d4a9579a.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.header-innerdiv{
+    width:fit-content ;
+    margin: 2rem;;
+    width: 50%;
+}
+
+.header-img{
+    margin:2rem;
+}
+.header-h1 pre{
+    margin: auto;
+    background-image: url('https://sophiemcdonaldvisualcommunication.files.wordpress.com/2015/04/black-and-white-tips.jpg');
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}

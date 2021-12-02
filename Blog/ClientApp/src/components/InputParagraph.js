@@ -1,4 +1,5 @@
 ﻿import React from 'react'
+import './InputParagraphs.css'
 
 class InputParagraph extends React.Component {
     constructor(props) {
@@ -37,13 +38,11 @@ class InputParagraph extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='input-paragraph-div'>
                 <div>
-                    <label className='form-label text-white'>header</label>
                     <input type='text' name='header' value={this.state.header} onChange={this.handleChange} className='form-control'></input> Header
                 </div>
                 <div>
-                    <label className='form-label text-white'>text</label>
                     <textarea value={this.state.text} name='text' className='form-control' row='3' onChange={this.handleChange}></textarea>
                 </div>
                 <button onClick={this.onClick} className='btn btn-primary m-2' >Add</button>

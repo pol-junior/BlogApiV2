@@ -1,0 +1,10 @@
+.blog-div{
+        background: black;
+        color: white;
+        border-radius: 12px;
+}
+
+.blog-header-innerdiv{
+    width: 50%;
+}
+

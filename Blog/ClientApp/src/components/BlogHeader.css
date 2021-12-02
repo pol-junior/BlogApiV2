@@ -1,0 +1,31 @@
+.blog-header-div{
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    margin: auto;
+    
+}
+
+.blog-header-innerdiv{
+    margin: 2.5rem;
+}
+
+.user-img{  
+    border: 1px solid white;
+    height: 150px;
+    width: 150px;   
+    border-radius: 100px;
+    margin-left: 2.5rem;
+    margin:1rem;
+}
+.blog-img{
+    margin: 2.5rem;
+    border-radius: 12px;
+    width: 40rem;
+
+}
+.user-name{
+    margin-left: 2.5rem;
+}

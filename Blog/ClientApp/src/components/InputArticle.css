@@ -1,0 +1,32 @@
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+ button {
+	border-radius: 20px;
+	border: 1px solid #67A5D0 ;
+	background-color: #67A5D0 ;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.previe-pre {
+    background: #302d3a;
+    color: #f1f1f1;
+    padding: 10px 16px;
+    border-radius: 2px;
+    counter-reset: line;    
+  }
+
+  .privew-div{
+    box-shadow: 5px 5px 5px 5px rgb(15, 15, 15);
+  }

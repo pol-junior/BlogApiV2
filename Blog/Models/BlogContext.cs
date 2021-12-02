@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Models
 {
-    public class BlogContext : IdentityDbContext
+    public class BlogContext : IdentityDbContext<User>
     {
         public BlogContext(DbContextOptions options) : base(options)
         {
@@ -17,6 +17,8 @@ namespace Blog.Models
         public virtual DbSet<Article> Articles { set; get; }
 
         public virtual DbSet<Paragraph> Paragraphs { get; set; }
+
+
 
     }
 }

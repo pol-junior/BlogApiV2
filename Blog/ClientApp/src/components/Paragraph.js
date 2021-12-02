@@ -1,4 +1,5 @@
 ﻿import React from 'react'
+import './Paragraph.css'
 
 class Paragraph extends React.Component {
     constructor(props) {
@@ -15,11 +16,11 @@ class Paragraph extends React.Component {
     render() {
         return (
             <div className="card-body m-2">
-                <h4 className="card-title mb-2 col-sm-6 m-auto text-center">{this.state.header}</h4>
-                <br/>
-                <p className="card-text m-auto col-sm-6">
+                <h4 className="card-title mb-2 col-sm-6 m-auto text-center ">{this.state.header}</h4>
+                <br/>       
+                <pre className="card-text m-auto col-sm-6 text-white-50">
                     {this.state.text}
-                     </p>
+                     </pre>
                 </div>
         )
     }

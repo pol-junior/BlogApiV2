@@ -16,3 +16,11 @@ html {
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.circle{
+  border-radius: 100px;
+}
+.navbar-nav img{
+  height: 25px;
+  width: 25xp;
+}

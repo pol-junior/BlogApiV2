@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Blog.Models
 {
-    public class Category
+    public class UserApiModel
     {
-        public int Id { get; set; }
-        public string CategoryName { set; get; }
+        public User User { set; get; }
+        public string Password { set; get; }
     }
 }

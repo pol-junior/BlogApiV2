@@ -1,0 +1,6 @@
+pre{
+    padding: 10px 16px;
+    border-radius: 2px;
+    height: fit-content;
+    white-space: pre-wrap;      
+}

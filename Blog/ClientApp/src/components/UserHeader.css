@@ -1,0 +1,61 @@
+.user-header-div{
+
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 3rem;
+}
+
+.user-info-div{
+    margin: auto;
+    height: fit-content;
+}
+
+.add-img-button{
+    height: fit-content;
+    background-image: url('https://img.icons8.com/cotton/2x/4a90e2/plus--v1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    margin-top: -30px;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.input-img{
+    border-radius: 12px;
+}
+.user-profile-img{
+    border: 1px solid white;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    margin-left: 2rem;
+    z-index: 3;
+}
+.user-info-div h1 { 
+    color: #ffffff;
+    font-family: 'Raleway',sans-serif;
+    font-size: 62px;
+    line-height: 72px;
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.user-info-innerdiv h5{
+    margin-left: 1.5rem;
+    margin-right:1.5rem ;
+    color: white;
+    width: fit-content;
+    background-color: rgb(40, 30, 49);
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+
+.user-info-innerdiv{
+    display: flex;
+    flex: row;
+    width: fit-content;
+    
+}

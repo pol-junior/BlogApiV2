@@ -1,7 +1,7 @@
 import React from 'react';
 import Preview from './Preview'
 
-export class PreviewList extends React.Component {
+ class PreviewList extends React.Component {
 
     constructor(props) {
         super(props);
@@ -25,3 +25,5 @@ export class PreviewList extends React.Component {
         );
     }
 }
+
+export default PreviewList

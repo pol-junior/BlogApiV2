@@ -18,10 +18,12 @@ namespace Blog.Models
         public string Title { set; get; }
         public IEnumerable<Paragraph> Paragraphs { set; get; }
         public DateTime Date { set; get; }
-        public int CategoryId { set; get; }
+        public string CategoryName { set; get; }
         public int Views { set; get; }
+        public string UserId { get; set; }
 
         [ForeignKey("UserId")]
         public User User { get; set; }
+
     }
 }

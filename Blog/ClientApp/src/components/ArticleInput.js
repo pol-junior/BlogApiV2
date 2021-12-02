@@ -1,6 +1,9 @@
 ﻿import React from 'react';
 import { NavLink, Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import jwt_decode from 'jwt-decode';
 import InputParagraph from './InputParagraph'
+import AuthorizeComponent from './AuthorizeComponent'
+import './InputArticle.css'
 
 
 class ArticleInput extends React.Component {
@@ -11,6 +14,7 @@ class ArticleInput extends React.Component {
         this.state = {
             title: '',
             imageUrl: '',
+            categoryName: '',
             article: {}
         }
 
@@ -23,60 +27,78 @@ class ArticleInput extends React.Component {
         })
     }
     async onClic() {
-        if (this.state.formErrors!='' && this.state.title!='') {
-            const response = await fetch('api/Article', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ title: this.state.title, imageUrl: this.state.imageUrl })
-            })
+        const token = sessionStorage.getItem('access_token')
+        var decoded = jwt_decode(sessionStorage.getItem('access_token'))
+        const response = await fetch('api/Article', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'bearer ' + token
+            },
+            body: JSON.stringify(
+                {
+                    title: this.state.title,
+                    imageUrl: this.state.imageUrl,
+                    categoryName: this.state.categoryName,
+                    userId: decoded.userIdClaim 
+                })
+        })
+
+        if(response.ok==true){
             const data = await response.json();
             this.setState({ article: data })
         }
-
     }
 
     render() {
-        const id =  this.state.article.id
-        console.log(id)
-        if (id != undefined) {
-            return (<div className = 'bg-dark'>
-                        <InputParagraph id={id} keu={id} />
-                   </div>
-            )
+       
+        const token = sessionStorage.getItem('access_token')
+        if (token) {
 
-        }
+            const id = this.state.article.id
+            if (id != undefined) {
+                return (<div className=''>
+                    <InputParagraph id={id} key={id} />
+                </div>
+                )
+            }
+            
+            return (
+                <>
+                    <div className='bg-white rounded m-auto d-flex flex-row'>
+                        <div className='w-50 p-4'>
 
-        return (
-            <>
-                <form className='bg-dark w-50 m-auto p-4'>
-                    <div>
-                        <label className='form-label text-white'>Title</label>
-                        <input type='text' className='form-control has-validation' name='title' onChange={this.onChange} required ></input>
-                        <div className='valid-feedback'>
-                            Nice as
+                            <div >
+                                <input type='text' className='mt-4' name='title' onChange={this.onChange}  placeholder='title' ></input>
+                            </div>
+
+                            <div  >
+                                <input type='text' className='mt-4' name='categoryName' onChange={this.onChange} placeholder='category' ></input>
+                            </div>
+
+                            <div >
+                                <input type='text' className='mt-4 mb-4' name='imageUrl' onChange={this.onChange} required placeholder='image url' ></input>
+                            </div>
+
+                            <button className='m-auto' onClick={this.onClic}>Add</button>
+                        </div>
+                        <div className='w-50'>
+                            <img className='w-100 h-100' src='https://oborot.ru/wp-content/uploads/2021/07/blogs-2.jpg'/>
                         </div>
                     </div>
-
-                    <div>
-                        <label className='form-label text-white'>Image url</label>
-                        <input type='url' className='form-control has-validation' name='imageUrl' onChange={this.onChange} required ></input>
-                    </div>
-
-                    <button type='submit' className='btn btn-primary mt-4 w-25' onClick={this.onClic}>Add</button>
-
-                </form>
-
-
-                <Router>
-                    <Switch>
-                        <Route path='/InputParagraph/:id' component={InputParagraph}></Route>
-                    </Switch>
-                </Router>
-            </>
-        )
-       
+                    <Router>
+                        <Switch>
+                            <Route path='/InputParagraph/:id' component={InputParagraph}></Route>
+                        </Switch>
+                    </Router>
+                </>
+            )
+        }
+        else {
+            return (
+                <AuthorizeComponent></AuthorizeComponent>
+            )
+        }
     }
 
 }
