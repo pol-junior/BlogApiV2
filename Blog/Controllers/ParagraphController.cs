@@ -28,9 +28,8 @@ namespace Blog.Controllers
 
             if (paragraph!=null)
             {
-                var res = await blogContext.Paragraphs.AddAsync(paragraph);
-                await blogContext.SaveChangesAsync();
-                return Ok(res.Entity);
+              var res = await blogContext.AddAsync(paragraph);
+              return Ok(res.Entity);
             }
                 
             return BadRequest();

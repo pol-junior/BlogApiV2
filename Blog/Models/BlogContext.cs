@@ -14,6 +14,19 @@ namespace Blog.Models
             Database.EnsureCreated();
         }
 
+
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+
+        //    modelBuilder.Entity<User>()
+        //    .HasKey("UserId");
+        //    modelBuilder.Entity<User>()
+        //            .HasMany(c => c.FollowedUsers)
+        //            .WithMany(s => s.FollowedUsers)
+        //            .UsingEntity(j => j.ToTable("FollowinUsers"));
+        //}
+
+
         public virtual DbSet<Article> Articles { set; get; }
 
         public virtual DbSet<Paragraph> Paragraphs { get; set; }

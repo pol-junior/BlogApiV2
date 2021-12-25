@@ -59,6 +59,7 @@ namespace Blog.Controllers
         private async Task<ClaimsIdentity> GetIdentity(string email, string password)
         {
             var user = await userManager.FindByEmailAsync(email);
+
             if (user != null)
             {
                 var res = await signInManager.CheckPasswordSignInAsync(user, password, false);

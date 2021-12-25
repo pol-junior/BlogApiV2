@@ -4,15 +4,20 @@ import { NavLink } from 'reactstrap';
 import Paragraph from './Paragraph'
 import BlogHeader from './BlogHeader'
 import './Blog.css'
+import Button from 'reactstrap/lib/Button';
 
 class Blog extends React.Component {
     constructor(props) {
         super(props)
         this.addView = this.addView.bind(this)
+        this.goBack = this.goBack.bind(this)
+
         this.state = {
             id: props.match.params.id,
             data: {}
         }
+
+
     }
 
     async componentDidMount() {
@@ -38,7 +43,13 @@ class Blog extends React.Component {
             },
             body: JSON.stringify(blog)
         })
+    
 
+    }
+
+
+    goBack(){
+        this.props.history.goBack()
     }
 
     render() {
@@ -54,7 +65,7 @@ class Blog extends React.Component {
                         {res}
                     </div>
                     <div>
-                        <NavLink tag={Link} className="text-white-50 btn btn-info" to="/previewList">Back</NavLink>
+                        <button tag={Link} onClick={this.goBack} className="text-50 w-100 text-center btn btn-info" to="/previewList">Back</button>
                     </div>
                 </div>
             )
